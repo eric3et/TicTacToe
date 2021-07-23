@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace TicTacToe
 {
-	public partial class Form1 : Form
+	public partial class LocalMultiPlayerPage : Form
 	{
 
 		static Player p1 = new Player("X", "O"); // Team X, enemy = O
@@ -91,7 +91,7 @@ namespace TicTacToe
 
 			}
 
-			if (	(numArray[0] == 1 && numArray[1] == 1 && numArray[2] == 1) //row 1
+			if (	(numArray[0] == 1 && numArray[1] == 1 && numArray[2] == 1) //row1
 				||	(numArray[3] == 1 && numArray[4] == 1 && numArray[5] == 1) //row2
 				||	(numArray[6] == 1 && numArray[7] == 1 && numArray[8] == 1) //row3
 				||	(numArray[0] == 1 && numArray[3] == 1 && numArray[6] == 1) //col1
@@ -100,18 +100,19 @@ namespace TicTacToe
 				||	(numArray[0] == 1 && numArray[4] == 1 && numArray[8] == 1) //diag1
 				||	(numArray[2] == 1 && numArray[4] == 1 && numArray[6] == 1) //diag2
 			){ 
-					txtDisplay.Text = "X Wins!";
-					lblDisplay.Text = "";
-					foreach (Button b in panel1.Controls)
-					{
-						b.Enabled = false;
-					}
-					btnReset.Location = new Point(13, 18);
-					btnReset.Size = new Size(157,41);
-					btnReset.Text = "Play Again?";
-					btnReset.BackColor = Color.LightBlue;
+				txtDisplay.Text = "X Wins!";
+				lblDisplay.Text = "";
+				foreach (Button b in panel1.Controls)
+				{
+					b.Enabled = false;
+				}
+				btnReset.Location = new Point(13, 18);
+				btnReset.Size = new Size(157,41);
+				btnReset.Text = "Play Again?";
+				btnReset.BackColor = Color.LightBlue;
+				btnSubmit.Enabled = false;
 			}
-			else if (	(numArray[0] == 0 && numArray[1] == 0 && numArray[2] == 0) //row 1
+			else if (	(numArray[0] == 0 && numArray[1] == 0 && numArray[2] == 0) //row1
 				||		(numArray[3] == 0 && numArray[4] == 0 && numArray[5] == 0) //row2
 				||		(numArray[6] == 0 && numArray[7] == 0 && numArray[8] == 0) //row3
 				||		(numArray[0] == 0 && numArray[3] == 0 && numArray[6] == 0) //col1
@@ -120,16 +121,17 @@ namespace TicTacToe
 				||		(numArray[0] == 0 && numArray[4] == 0 && numArray[8] == 0) //diag1
 				||		(numArray[2] == 0 && numArray[4] == 0 && numArray[6] == 0) //diag2
 			){
-					txtDisplay.Text = "O Wins!";
-					lblDisplay.Text = "";
-					foreach (Button b in panel1.Controls)
-					{
-						b.Enabled = false;
-					}
-					btnReset.Location = new Point(13, 18);
-					btnReset.Size = new Size(157, 41);
-					btnReset.Text = "Play Again?";
-					btnReset.BackColor = Color.LightBlue;
+				txtDisplay.Text = "O Wins!";
+				lblDisplay.Text = "";
+				foreach (Button b in panel1.Controls)
+				{
+					b.Enabled = false;
+				}
+				btnReset.Location = new Point(13, 18);
+				btnReset.Size = new Size(157, 41);
+				btnReset.Text = "Play Again?";
+				btnReset.BackColor = Color.LightBlue;
+				btnSubmit.Enabled = false;
 			}
 			
 
@@ -137,7 +139,7 @@ namespace TicTacToe
 
 		}
 
-		public Form1()
+		public LocalMultiPlayerPage()
 		{
 
 			InitializeComponent();
@@ -283,9 +285,14 @@ namespace TicTacToe
 			btnReset.BackColor = Color.Salmon;
 			btnReset.Location = new Point(62, 18);
 			btnReset.Size = new Size(108, 41);
-			txtDisplay.Text = "X's Turn";
-			lblDisplay.Text = "X";
+			playerTurn = 0;
+			currPlayer = players[playerTurn];
+			txtDisplay.Text = currPlayer.team + "'s Turn";
+			lblDisplay.Text = currPlayer.team;
 			btnReset.Text = "Reset";
+			btnSubmit.Enabled = true;
+
+
 			foreach (Button b in panel1.Controls)
 			{
 				b.Enabled = true;
