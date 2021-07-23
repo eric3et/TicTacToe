@@ -1,7 +1,7 @@
 ﻿
 namespace TicTacToe
 {
-    partial class Form1
+    partial class LocalMultiPlayerPage
     {
         /// <summary>
         ///  Required designer variable.
