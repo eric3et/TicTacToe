@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace TicTacToe
 {
-	public partial class LocalMultiPlayerPage : Form
+	public partial class OnlineMultiPlayerPage : Form
 	{
 
 		static Player p1 = new Player("X", "O"); // Team X, enemy = O
@@ -139,7 +139,7 @@ namespace TicTacToe
 
 		}
 
-		public LocalMultiPlayerPage()
+		public OnlineMultiPlayerPage()
 		{
 
 			InitializeComponent();
@@ -300,9 +300,9 @@ namespace TicTacToe
 			}
 		}
 
-		private void btnBack_Click(object sender, EventArgs e)
-		{
+        private void btnBack_Click(object sender, EventArgs e)
+        {
 			this.Close();
-		}
-	}
+        }
+    }
 }
