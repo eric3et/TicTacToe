@@ -17,11 +17,12 @@ namespace TicTacToe
 		static Player p1 = new Player("X", "O"); // Team X, enemy = O
 		static Player p2 = new Player("O", "X"); // Team O, enemy = X
 		static Player[] players = { p1, p2 };
-		
+		static int alternateTurns = 0;
+
 
 
 		// set initial turn to player X
-		static int playerTurn = 0;
+		static int playerTurn = alternateTurns;
 		Player currPlayer = players[playerTurn];
 
 		private void ClearOldButton(string btnName)
@@ -512,8 +513,9 @@ namespace TicTacToe
 		{
 
 			txtDisplay.Text = "X's Turn";
-
 			
+
+
 
 		}
 
@@ -655,7 +657,16 @@ namespace TicTacToe
 			btnReset.BackColor = Color.Salmon;
 			btnReset.Location = new Point(62, 18);
 			btnReset.Size = new Size(108, 41);
-			playerTurn = 0;
+			if (alternateTurns == 0)
+            {
+				alternateTurns = 1;
+				playerTurn = 1;
+            }
+            else
+            {
+				alternateTurns = 0;
+				playerTurn = 0;
+			}
 			currPlayer = players[playerTurn];
 			txtDisplay.Text = currPlayer.team + "'s Turn";
 			lblDisplay.Text = currPlayer.team;
@@ -668,6 +679,12 @@ namespace TicTacToe
 				b.Enabled = true;
 				b.Text = " ";
 			}
+
+			if (playerTurn != 0)
+			{
+				OpponentPickBox();
+			}
+
 		}
 
 		private void btnBack_Click(object sender, EventArgs e)
