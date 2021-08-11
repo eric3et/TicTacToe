@@ -30,11 +30,6 @@ namespace TicTacToe
             p.Show();
         }
 
-        private void btnOnlineMulti_Click(object sender, EventArgs e)
-        {
-            OnlineMultiPlayerPage p = new OnlineMultiPlayerPage();
-            p.Show();
-            
-        }
+
     }
 }
