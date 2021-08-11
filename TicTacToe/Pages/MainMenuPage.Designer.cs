@@ -32,7 +32,6 @@ namespace TicTacToe
             this.label1 = new System.Windows.Forms.Label();
             this.btnSinglePlayer = new System.Windows.Forms.Button();
             this.btnLocalMulti = new System.Windows.Forms.Button();
-            this.btnOnlineMulti = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -70,25 +69,14 @@ namespace TicTacToe
             this.btnLocalMulti.Text = "Local Multiplayer";
             this.btnLocalMulti.UseVisualStyleBackColor = true;
             this.btnLocalMulti.Click += new System.EventHandler(this.btnLocalMulti_Click);
-            // 
-            // btnOnlineMulti
-            // 
-            this.btnOnlineMulti.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnOnlineMulti.Location = new System.Drawing.Point(60, 340);
-            this.btnOnlineMulti.Name = "btnOnlineMulti";
-            this.btnOnlineMulti.Size = new System.Drawing.Size(252, 59);
-            this.btnOnlineMulti.TabIndex = 3;
-            this.btnOnlineMulti.TabStop = false;
-            this.btnOnlineMulti.Text = "Online MultiPlayer";
-            this.btnOnlineMulti.UseVisualStyleBackColor = true;
-            this.btnOnlineMulti.Click += new System.EventHandler(this.btnOnlineMulti_Click);
+
+
             // 
             // MainMenuPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(366, 451);
-            this.Controls.Add(this.btnOnlineMulti);
             this.Controls.Add(this.btnLocalMulti);
             this.Controls.Add(this.btnSinglePlayer);
             this.Controls.Add(this.label1);
@@ -106,6 +94,5 @@ namespace TicTacToe
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnSinglePlayer;
         private System.Windows.Forms.Button btnLocalMulti;
-        private System.Windows.Forms.Button btnOnlineMulti;
     }
 }
