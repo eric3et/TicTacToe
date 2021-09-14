@@ -107,8 +107,8 @@ namespace TicTacToe
 				{
 					b.Enabled = false;
 				}
-				btnReset.Location = new Point(13, 18);
-				btnReset.Size = new Size(157,41);
+				btnReset.Location = new Point(124, 36);
+				//btnReset.Size = new Size(157,41);
 				btnReset.Text = "Play Again?";
 				btnReset.BackColor = Color.LightBlue;
 				btnSubmit.Enabled = false;
@@ -128,8 +128,8 @@ namespace TicTacToe
 				{
 					b.Enabled = false;
 				}
-				btnReset.Location = new Point(13, 18);
-				btnReset.Size = new Size(157, 41);
+				btnReset.Location = new Point(124, 36);
+				//btnReset.Size = new Size(157, 41);
 				btnReset.Text = "Play Again?";
 				btnReset.BackColor = Color.LightBlue;
 				btnSubmit.Enabled = false;
@@ -656,7 +656,7 @@ namespace TicTacToe
 		{
 			btnReset.BackColor = Color.Salmon;
 			btnReset.Location = new Point(62, 18);
-			btnReset.Size = new Size(108, 41);
+			//btnReset.Size = new Size(108, 41);
 			if (alternateTurns == 0)
             {
 				alternateTurns = 1;
