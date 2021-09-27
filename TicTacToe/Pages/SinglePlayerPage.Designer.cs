@@ -340,7 +340,7 @@ namespace TicTacToe
             this.MaximumSize = new System.Drawing.Size(738, 1000);
             this.MinimumSize = new System.Drawing.Size(738, 1000);
             this.Name = "SinglePlayerPage";
-            this.Text = "TIC - TAC - TOE";
+            this.Text = "TIC-TAC-TOE ( Singleplayer)";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
