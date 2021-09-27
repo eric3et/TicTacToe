@@ -655,7 +655,6 @@ namespace TicTacToe
 		private void btnReset_Click(object sender, EventArgs e)
 		{
 			btnReset.BackColor = Color.Salmon;
-			btnReset.Location = new Point(62, 18);
 			//btnReset.Size = new Size(108, 41);
 			if (alternateTurns == 0)
             {
